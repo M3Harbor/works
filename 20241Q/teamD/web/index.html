@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いぬ図鑑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- タイトル部分 -->
+    <div class="header">
+        <div class="headerLogo">いぬ図鑑</div>
+    </div>
+ 
+    <!-- 一覧部分 -->
+    <div class="dogTable">
+        <table border=”1″>
+            <tr>
+            <th>名前</th>
+            <th>原産</th>
+            <th>特徴</th>
+            <th>　　</th>
+            </tr>
+            <tr>
+            <td>ビーグル</td>
+            <td>イギリス</td>
+            <td>寂しがり屋</td>
+            <td><form action="navigate" method="post">
+                <button type="submit" name="button" value="Page1">詳細</button>
+            </form></td>
+            </tr>
+            <tr>
+            <td>柴犬</td>
+            <td>日本</td>
+            <td>飼い主に忠実</td>
+            <td><form action="navigate" method="post">
+                <button type="submit" name="button" value="Page2">詳細</button>
+            </form></td>
+            </tr>
+            <tr>
+            <td>チワワ</td>
+            <td>メキシコ</td>
+            <td>世界最小</td>
+            <td><form action="navigate" method="post">
+                <button type="submit" name="button" value="Page3">詳細</button>
+            </form></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

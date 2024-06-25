@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Web/sites/M3H-matsuo-app",
+    "appService.deploySubpath": "."
+}

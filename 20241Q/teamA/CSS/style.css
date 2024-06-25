@@ -1,0 +1,80 @@
+/* リスト全体のスタイル */
+body {
+    background-color: #abd4f1; /* 背景色 */
+    color: #444; /* テキスト色 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* フォントファミリー */
+    background-image: url('img/mountaion.img'); /* 背景画像のパス */
+    background-size: cover; /* 背景画像をカバーするようにサイズ調整 */
+    background-position: center; /* 背景画像を中央揃え */
+    background-repeat: no-repeat; /* 背景画像の繰り返しをしない */
+}
+
+h1 {
+    font-size: 36px; /* フォントサイズ */
+    font-weight: bold; /* 太字 */
+    color: #333; /* ヘッダーのテキスト色 */
+    text-align: center; /* テキストを中央揃え */
+    margin-top: 40px; /* 上部のマージン */
+    margin-bottom: 40px; /* 下部のマージン */
+}
+
+ul.parent-list {
+    list-style-type: none; /* 箇条書きの記号を非表示 */
+    padding: 30px; /* パディング */
+    background-color: #fff; /* リストの背景色 */
+    border-radius: 8px; /* ボーダーの角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影の設定 */
+    text-align: center;
+}
+
+/* リストアイテムのスタイル */
+ul.parent-list li {
+    margin-bottom: 20px; /* 各リストアイテムの下の余白 */
+}
+
+/* リストアイテム内のリンクのスタイル */
+ul.parent-list li a.list-item-link {
+    text-decoration: none; /* 下線を非表示 */
+    color: #333; /* リンクのテキスト色 */
+    display: block; /* リンクをブロック要素化して全体をクリック可能に */
+    padding: 15px; /* リンクの内側の余白 */
+    border: 1px solid #ddd; /* リンクのボーダー */
+    border-radius: 5px; /* ボーダーの角を丸くする */
+    transition: background-color 0.3s ease; /* 背景色の変化を滑らかに */
+    text-align: center;
+}
+
+/* リンクにマウスを乗せたときのスタイル */
+ul.parent-list li a.list-item-link:hover {
+    background-color: #b4cef0; /* マウスホバー時の背景色 */
+}
+
+/* 各リストアイテム内の番号部分のスタイル */
+ul.parent-list li a.list-item-link .list-item-number {
+    margin-right: 12px; /* 番号とテキストの間の余白 */
+    font-weight: bold; /* 番号の太字 */
+}
+
+/* 各リストアイテム内のテキスト部分のスタイル */
+ul.parent-list li a.list-item-link .list-item-text {
+    font-size: 1.2em; /* テキストのフォントサイズ */
+}
+
+/* レスポンシブデザイン: ウィンドウが狭いときのスタイル */
+@media (max-width: 600px) {
+    ul.parent-list {
+        padding: 20px; /* 小さい画面でのパディング */
+    }
+    ul.parent-list li {
+        margin-bottom: 12px; /* 小さい画面でのリストアイテムの下の余白 */
+    }
+    ul.parent-list li a.list-item-link {
+        padding: 12px; /* 小さい画面でのリンクの内側の余白 */
+    }
+    ul.parent-list li a.list-item-link .list-item-number {
+        font-size: 1em; /* 小さい画面での番号のフォントサイズ */
+    }
+    ul.parent-list li a.list-item-link .list-item-text {
+        font-size: 1em; /* 小さい画面でのテキストのフォントサイズ */
+    }
+}

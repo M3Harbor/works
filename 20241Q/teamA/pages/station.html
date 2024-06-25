@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style2.css">
+
+    <title>都道府県・路線・駅名選択</title>
+
+   
+
+</head>
+<body>
+    <div id="app" v-cloak>
+        <h1 class="title">検索した駅を表示する</h1>
+
+    <div class="columns">
+    <table align="center">
+        <tr>
+            <th>都道府県</th>
+            <td>
+                <select id="pref" >
+                    <option value="" >都道府県を選択してください</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>路線名</th>
+            <td>
+                <select id="line">
+                    <option value="">路線を選択してください</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>駅名</th>
+            <td id="stationName">該当の駅名を表示します！</td>
+        </tr>
+        
+      
+              
+          
+    
+          
+
+    </table>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            var pref = $('#pref');
+            var line = $('#line');
+            var stationName = $('#stationName');
+
+            // 都道府県の読み込み
+            $.getJSON('https://express.heartrails.com/api/json?method=getPrefectures&callback=?', function (json) {
+                $.each(json.response.prefecture, function (key, value) {
+                    var text = String(this);
+                    pref.append('<option value="' + text + '">' + text + "</option>");
+                });
+            });
+
+            // 都道府県から路線を検索
+            pref.on('change', function () {
+                $.getJSON('https://express.heartrails.com/api/json?method=getLines&callback=?', {
+                    prefecture: pref.val()
+                }, function (json) {
+                    line.children().not(':first').remove();
+                    stationName.text('該当の駅名を表示します！');
+                    $.each(json.response.line, function (key, value) {
+                        var text = String(this);
+                        line.append('<option value="' + text + '">' + text + "</option>");
+                    });
+                });
+            });
+
+            // 路線から駅名を検索
+            line.on('change', function () {
+                $.getJSON('https://express.heartrails.com/api/json?method=getStations&callback=?', {
+                    line: line.val()
+                }, function (json) {
+                    stationName.empty();
+                    $.each(json.response.station, function (key, value) {
+                        var text = String(this.name);
+                        stationName.append('<p>' + text + '駅</p>');
+                    });
+                });
+            });
+        });
+    </script>
+
+    <a>引用 : </a>
+
+
+    <a href="https://express.heartrails.com/api.html#prefecture">HeartRails Express</a>
+
+
+
+</body>
+</html>

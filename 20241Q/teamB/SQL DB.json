@@ -1,0 +1,42 @@
+{
+    "sku": {
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 2
+    },
+    "kind": "v12.0,user,vcore",
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 34359738368,
+        "status": "Online",
+        "databaseId": "ec29fece-8401-4d6e-8381-56335a364126",
+        "creationDate": "2024-06-11T06:20:52.92Z",
+        "currentServiceObjectiveName": "GP_Gen5_2",
+        "requestedServiceObjectiveName": "GP_Gen5_2",
+        "defaultSecondaryLocation": "japanwest",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "licenseType": "LicenseIncluded",
+        "maxLogSizeBytes": 193273528320,
+        "earliestRestoreDate": "2024-06-13T14:43:53.4787021Z",
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "GP_Gen5",
+            "tier": "GeneralPurpose",
+            "family": "Gen5",
+            "capacity": 2
+        },
+        "currentBackupStorageRedundancy": "Local",
+        "requestedBackupStorageRedundancy": "Local",
+        "maintenanceConfigurationId": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "availabilityZone": "NoPreference"
+    },
+    "location": "japaneast",
+    "tags": {},
+    "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Sql/servers/m3h-bwebappsqlsl/databases/m3h-bwebappsqlsl",
+    "name": "m3h-bwebappsqlsl",
+    "type": "Microsoft.Sql/servers/databases"
+}

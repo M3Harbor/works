@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>都道府県のホームページリンク</title>
+    <style>
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>各都道府県のホームページ表示</h1>
+    <label for="prefecture_name">都道府県名:</label>
+    <input type="text" id="prefecture_name" placeholder="都道府県名を入力"><br><br>
+    <button onclick="searchPrefecture()">検索</button>
+    <div id="result"></div>
+
+    <script>
+         // JSONデータ
+        var prefectureData = [
+            {
+                "prefecture_name": "北海道",
+                "hplinks": ["https://www.pref.hokkaido.lg.jp/"],
+                "gazou":["img/hokkaido.png"]
+            }
+            ,
+            {
+                "prefecture_name": "宮城県",
+                "hplinks": ["https://www.pref.miyagi.jp/"],
+                "gazou":["img/miyagi.png"]
+            }
+            ,
+            {
+                "prefecture_name": "東京都",
+                "hplinks": ["https://www.metro.tokyo.lg.jp/"],
+                "gazou":["img/tokyo.png"]
+            }
+            ,
+            {
+                "prefecture_name": "神奈川県",
+                "hplinks": ["https://www.pref.kanagawa.jp/"],
+                "gazou":["img/kanagawa.png"]
+            }
+            ,
+            {
+                "prefecture_name": "千葉県",
+                "hplinks": ["https://www.pref.chiba.lg.jp/"],
+                "gazou":["img/chiba.png"]
+            }
+            ,
+            {
+                "prefecture_name": "埼玉県",
+                "hplinks": ["https://www.pref.saitama.lg.jp/"],
+                "gazou":["img/saitama.png"]
+            }
+            ,
+            {
+                "prefecture_name": "群馬県",
+                "hplinks": ["https://www.pref.gunma.jp/"],
+                "gazou":["img/gunma.png"]
+            }
+            ,
+            {
+                "prefecture_name": "愛知県",
+                "hplinks": ["https://www.pref.aichi.jp/"],
+                "gazou":["img/aichi.png"]
+            }
+            ,
+            {
+                "prefecture_name": "京都府",
+                "hplinks": ["https://www.pref.kyoto.jp/"],
+                "gazou":["img/kyoto.png"]
+            }
+            ,
+            {
+                "prefecture_name": "大阪府",
+                "hplinks": ["https://www.pref.osaka.lg.jp/index.html"],
+                "gazou":["img/oosaka.png"]
+            }
+            ,
+            {
+                "prefecture_name": "兵庫県",
+                "hplinks": ["https://web.pref.hyogo.lg.jp/"],
+                "gazou":["img/hyogo.png"]
+            }
+            ,
+            {
+                "prefecture_name": "広島県",
+                "hplinks": ["https://www.pref.hiroshima.lg.jp/"],
+                "gazou":["img/hiroshima.png"]
+            }
+            ,
+            {
+                "prefecture_name": "高知県",
+                "hplinks": ["https://www.pref.kochi.lg.jp/"],
+                "gazou":["img/kochi.png"]
+            }
+            ,
+            {
+                "prefecture_name": "福岡県",
+                "hplinks": ["https://www.pref.fukuoka.lg.jp/"],
+                "gazou":["img/fukuoka.png"]
+            }
+            ,
+            {
+                "prefecture_name": "沖縄県",
+                "hplinks": ["https://www.pref.okinawa.jp/"],
+                "gazou":["img/okinawa.png"]
+            }
+
+        ];
+
+        function searchPrefecture() {
+            var prefectureName = document.getElementById("prefecture_name").value;
+            var prefectureInfo = findPrefecture(prefectureData, prefectureName);
+            if (prefectureInfo) {
+                document.write('<img src=' + prefectureInfo.gazou + ' width="500" height="500"></img>');
+                document.write('<br size="1">　画像出典: https://illustimage.com/ </br>');
+            
+                document.write('<br></br>');
+                document.write('<a href="' + prefectureInfo.hplinks + '" style="font-size: 50px;">' + 
+                    prefectureInfo.prefecture_name + 'HP</a>' );
+                
+            } else {
+                alert("入力された都道府県は見つかりませんでした。");
+            }
+        }
+
+        function findPrefecture(prefectures, prefectureName) {
+            for (var i = 0; i < prefectures.length; i++) {
+                if (prefectures[i].prefecture_name === prefectureName) {
+                    return prefectures[i];
+                }
+            }
+            return null;
+        }
+
+        function displayLines(lines) {
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+            if (lines.length > 0) {
+                var linesList = document.createElement("ul");
+                lines.forEach(line => {
+                    var lineItem = document.createElement("li");
+                    lineItem.textContent = line;
+                    linesList.appendChild(lineItem);
+                });
+                resultDiv.appendChild(linesList);
+            } else {
+                resultDiv.textContent = "ホームページが見つかりませんでした。";
+            }
+        }
+    </script>
+</body>
+</html>

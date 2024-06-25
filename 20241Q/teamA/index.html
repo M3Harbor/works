@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Main Page</title>
+</head>
+<body>
+ 
+    <h1>都道府県図鑑</h1>
+    <ul class="parent-list list">
+       
+        <li>
+            <a class="list-item-link" href="pages/hplinks.html">
+            <span class="list-item-number">1</span>
+            <span class="list-item-text">各都道府県ホームページ</span>
+            </a>
+        </li>
+        <li>
+            <a class="list-item-link" href="pages/weather.html">
+            <span class="list-item-number">2</span>
+            <span class="list-item-text">地域の天気を調べる</span>        
+            </a>
+        </li>
+ 
+        <li>
+            <a class="list-item-link" href="pages/station.html">
+            <span class="list-item-number">3</span>
+            <span class="list-item-text">検索した駅を表示する</span>        
+            </a>
+        </li>
+ 
+    </ul>
+</body>
+ 
+    <script>
+            var today = new Date();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+ 
+            if ( hours < 10 ){
+                hours = '0' + hours;
+            }
+            if ( minutes < 10 ){
+                minutes = '0' + minutes;
+            }
+            if ( seconds < 10 ){
+                seconds = '0' + seconds;
+            }
+ 
+            var todayHtml = today.getFullYear() + '/' + (today.getMonth() +1 ) + '/' + today.getDate() + '/' + hours + ':' + minutes + ':' + seconds ;
+ 
+ 
+            document.write('<p class="date"> 参照時刻：'+ todayHtml + '</p>' );
+ 
+    </script>
+ 
+ 
+</body>
+ 
+</html>

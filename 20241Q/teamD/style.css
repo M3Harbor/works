@@ -1,0 +1,64 @@
+
+/*ヘッダー*/
+.header{
+    /*背景色を　#6EB5C0にする*/
+    background-color: #6EB5C0;
+    /* 高さを90pxにする */
+    height: 90px;
+}
+
+/*ヘッダー　ロゴ*/
+.headerLogo{
+    /* フォントカラーを　#fffにする */
+    color: #fff;
+    /* フォントサイズを　26pxにする */
+    font-size: 26px;
+    /* 上下のパディング */
+    padding: 25px 20px;
+    float: left;
+}
+
+
+/*一覧*/
+table {
+    /*線の隙間をなくす*/
+    border-collapse: collapse;
+    /*表の幅*/
+    width:800px;
+    /*表の中央寄せ*/
+    position: relative;
+  }
+
+.dogTable{
+    /*表の中央寄せ*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+}
+
+/*一覧　列名*/
+.dogTable th{
+    /*実線1px　線の色　#006c84　*/
+    border: solid 1px #006c84;
+    /*背景色を　 #006c84にする*/
+    background-color: #006c84;
+    /* フォントカラーを　#fffにする */
+    color: #fff;
+}
+
+/*一覧　列*/
+.dogTable td{
+    /*実線1px　線の色　#006c84　*/
+    border: solid 1px #006c84;
+    /* フォントカラーを　#006c84にする */
+    color: #006c84;
+    /* 列の高さ*/
+    height:100px
+}
+
+/*一覧　列　奇数列の背景色をかえる*/
+tr:nth-child(even) {
+    background-color: #d4e9eb;
+  }

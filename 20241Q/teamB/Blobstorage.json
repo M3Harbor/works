@@ -1,0 +1,63 @@
+{
+    "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Storage/storageAccounts/m3hbwebappstac",
+    "name": "m3hbwebappstac",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "japaneast",
+    "tags": {},
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": true,
+        "publicNetworkAccess": "Enabled",
+        "keyCreationTime": {
+            "key1": "2024-06-11T09:50:24.4810518Z",
+            "key2": "2024-06-11T09:50:24.4810518Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": true,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-06-11T09:50:24.4967301Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-06-11T09:50:24.4967301Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2024-06-11T09:50:24.4030001Z",
+        "primaryEndpoints": {
+            "dfs": "https://m3hbwebappstac.dfs.core.windows.net/",
+            "web": "https://m3hbwebappstac.z11.web.core.windows.net/",
+            "blob": "https://m3hbwebappstac.blob.core.windows.net/",
+            "queue": "https://m3hbwebappstac.queue.core.windows.net/",
+            "table": "https://m3hbwebappstac.table.core.windows.net/",
+            "file": "https://m3hbwebappstac.file.core.windows.net/"
+        },
+        "primaryLocation": "japaneast",
+        "statusOfPrimary": "available"
+    }
+}

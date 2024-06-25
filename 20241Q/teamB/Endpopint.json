@@ -1,0 +1,41 @@
+{
+    "name": "M3H-Bendpoint",
+    "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Network/privateEndpoints/M3H-Bendpoint",
+    "etag": "W/\"88fd2461-5722-4e5b-b20d-71bb806044cc\"",
+    "type": "Microsoft.Network/privateEndpoints",
+    "location": "japaneast",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "b7029220-6a7a-4e4e-bd00-862739b4630b",
+        "privateLinkServiceConnections": [
+            {
+                "name": "M3H-Bendpoint_639bc2e8-7716-4af2-b536-11be38484035",
+                "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Network/privateEndpoints/M3H-Bendpoint/privateLinkServiceConnections/M3H-Bendpoint_639bc2e8-7716-4af2-b536-11be38484035",
+                "etag": "W/\"88fd2461-5722-4e5b-b20d-71bb806044cc\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateLinkServiceId": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourcegroups/M3Harbor/providers/Microsoft.DocumentDB/databaseAccounts/m3h-b-cosdb",
+                    "groupIds": [
+                        "Sql"
+                    ],
+                    "privateLinkServiceConnectionState": {
+                        "status": "Disconnected",
+                        "description": "",
+                        "actionsRequired": "None"
+                    }
+                },
+                "type": "Microsoft.Network/privateEndpoints/privateLinkServiceConnections"
+            }
+        ],
+        "manualPrivateLinkServiceConnections": [],
+        "subnet": {
+            "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Network/virtualNetworks/M3H_Bvnet/subnets/M3H_Bdbsub"
+        },
+        "networkInterfaces": [
+            {
+                "id": "/subscriptions/a474a5eb-5755-4db1-be27-7d0645e81929/resourceGroups/M3Harbor/providers/Microsoft.Network/networkInterfaces/M3H-Bendpoint.nic.684922ee-ac8b-4934-b044-bde41bbaa5cd"
+            }
+        ]
+    }
+}
